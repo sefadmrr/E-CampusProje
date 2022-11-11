@@ -12,14 +12,15 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 @Entity
-public class Faculty {
+public class Faculty extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String facultyName;
-    private LocalDateTime createDate = LocalDateTime.now();
+
     @OneToMany
     private List<Department> departments;
+
 
 
 }

@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 @Entity
-public class Lessons {
+public class Lessons extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -13,10 +13,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @ToString
 @Entity
-public class Department {
+public class Department extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String departmentName;
-    private LocalDateTime createDate = LocalDateTime.now();
+    //fakülteye bağlı
 }

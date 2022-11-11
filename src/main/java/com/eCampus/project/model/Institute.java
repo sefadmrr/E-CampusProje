@@ -3,6 +3,7 @@ package com.eCampus.project.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -10,15 +11,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 @Entity
-public class Student extends BaseEntity{
+public class Institute extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String lastName;
-    private String birthDay;
-    private String registryDate;
-    private int termInfo;
-    @ManyToOne
-    private Department department;
+    @OneToMany
+    private List<Department> departments;
 }

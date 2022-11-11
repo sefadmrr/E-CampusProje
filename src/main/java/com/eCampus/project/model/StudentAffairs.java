@@ -13,17 +13,11 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @ToString
 @Entity
-public class Admin extends BaseEntity{
+public class StudentAffairs extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String mail;
     private String password;
-
-    public Admin(String username, String mail, String password) {
-        this.username = username;
-        this.mail = mail;
-        this.password = password;
-    }
 }
