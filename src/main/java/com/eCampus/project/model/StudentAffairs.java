@@ -20,4 +20,10 @@ public class StudentAffairs extends BaseEntity{
     private String username;
     private String mail;
     private String password;
+
+    public StudentAffairs(String username, String mail, String password) {
+        this.username = username;
+        this.mail = mail;
+        this.password = password;
+    }
 }

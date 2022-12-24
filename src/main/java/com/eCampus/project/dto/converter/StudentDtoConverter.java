@@ -18,10 +18,10 @@ public class StudentDtoConverter {
                 student.getName(),
                 student.getLastName(),
                 student.getBirthDay(),
-                student.getRegistryDate(),
                 student.getTermInfo(),
-                departmentDtoConverter.convertDepartmentToDepartmentDto(student.getDepartment())
-
+                departmentDtoConverter.convertDepartmentToDepartmentDto(student.getDepartment()),
+                student.getCreateDate(),
+                student.getUpdateDate()
         );
     }
 }

@@ -13,7 +13,8 @@ public class DepartmentDtoConverter {
     public DepartmentDto convertDepartmentToDepartmentDto(Department department){
         return new DepartmentDto(
                 department.getDepartmentName(),
-                department.getCreateDate().toString()
+                department.getCreateDate(),
+                department.getUpdateDate()
         );
     }
 

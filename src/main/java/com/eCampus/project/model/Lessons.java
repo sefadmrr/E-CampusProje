@@ -17,4 +17,9 @@ public class Lessons extends BaseEntity{
     private String lessonName;
     @ManyToOne
     private Department department;
+
+    public Lessons(String lessonName, Department department) {
+        this.lessonName = lessonName;
+        this.department = department;
+    }
 }

@@ -13,8 +13,10 @@ public class StudentCreateRequest {
     private String lastName;
     @NotBlank
     private String birthDay;
-    @NotBlank
-    private String registryDate;
     @NotNull
     private int termInfo;
+    @NotBlank
+    private String departmentName;
+    @NotBlank
+    private String studentAffairsUsername;
 }

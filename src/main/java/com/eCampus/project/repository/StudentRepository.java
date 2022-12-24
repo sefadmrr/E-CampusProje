@@ -3,6 +3,9 @@ package com.eCampus.project.repository;
 import com.eCampus.project.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface StudentRepository extends JpaRepository<Student,Long>{
+import java.util.Optional;
 
+public interface StudentRepository extends JpaRepository<Student,Long>{
+    Optional<Student> findStudentByName(String name);
+    Optional<Student> findStudentByLastName(String lastname);
 }

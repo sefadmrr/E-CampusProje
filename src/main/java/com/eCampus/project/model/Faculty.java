@@ -3,7 +3,6 @@ package com.eCampus.project.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -18,9 +17,7 @@ public class Faculty extends BaseEntity{
     private Long id;
     private String facultyName;
 
-    @OneToMany
-    private List<Department> departments;
-
-
-
+    public Faculty(String facultyName) {
+        this.facultyName = facultyName;
+    }
 }

@@ -7,17 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class FacultyDtoConverter {
 
-    private final DepartmentDtoConverter departmentDtoConverter;
-
-    public FacultyDtoConverter(DepartmentDtoConverter departmentDtoConverter) {
-        this.departmentDtoConverter = departmentDtoConverter;
-    }
-
     public FacultyDto convertFacultyToFacultyDto(Faculty faculty){
         return new FacultyDto(
                 faculty.getFacultyName(),
-                faculty.getCreateDate().toString(),
-                departmentDtoConverter.convertDepartmentListToDepartmentDtoList(faculty.getDepartments())
+                faculty.getCreateDate().toString()
         );
     }
 }

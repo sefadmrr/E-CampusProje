@@ -17,8 +17,16 @@ public class Student extends BaseEntity{
     private String name;
     private String lastName;
     private String birthDay;
-    private String registryDate;
     private int termInfo;
     @ManyToOne
     private Department department;
+
+    public Student(String name, String lastName, String birthDay,
+                   int termInfo, Department department) {
+        this.name = name;
+        this.lastName = lastName;
+        this.birthDay = birthDay;
+        this.termInfo = termInfo;
+        this.department = department;
+    }
 }

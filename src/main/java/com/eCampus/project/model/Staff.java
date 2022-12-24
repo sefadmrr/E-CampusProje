@@ -21,4 +21,12 @@ public class Staff extends BaseEntity{
     @ManyToOne
     private Faculty faculty;
 
+    public Staff(String name, String surname, String mail,
+                 String number, Faculty faculty) {
+        this.name = name;
+        this.surname = surname;
+        this.mail = mail;
+        this.number = number;
+        this.faculty = faculty;
+    }
 }

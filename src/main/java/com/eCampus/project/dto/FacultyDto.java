@@ -9,5 +9,4 @@ import java.util.List;
 public class FacultyDto {
     private String facultyName;
     private String createDate;
-    private List<DepartmentDto> departments;
 }

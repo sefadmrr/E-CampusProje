@@ -1,12 +1,16 @@
 package com.eCampus.project.model;
 
-import lombok.Data;
+import lombok.*;
 
+import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
+@ToString
+@MappedSuperclass
 public abstract class BaseEntity {
-    private LocalDateTime createDate;
+    private LocalDateTime createDate = LocalDateTime.now();
     private LocalDateTime updateDate;
 
 }
